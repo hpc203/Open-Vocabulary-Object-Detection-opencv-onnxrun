@@ -92,7 +92,7 @@ if __name__=='__main__':
         cv2.rectangle(srcimg, (obj['xmin'], obj['ymin']), (obj['xmax'], obj['ymax']), (0,0,255), 2)
         cv2.putText(srcimg, obj['name'], (obj['xmin'], obj['ymin']-5), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 1, cv2.LINE_AA)
 
-    # cv2.imwrite('result.jpg', drawimg)
+    # cv2.imwrite('result.jpg', srcimg)
     winName = 'Simple Open-Vocabulary Object Detection with Vision Transformers use OpenCV'
     cv2.namedWindow(winName, 0)
     cv2.imshow(winName, srcimg)
