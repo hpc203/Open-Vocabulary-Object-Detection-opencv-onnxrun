@@ -2,7 +2,7 @@ import cv2
 import onnxruntime as ort
 import numpy as np
 from tokenizer import build_tokenizer
-print(ort.__version__)
+print(ort.__version__)  ###onnxruntime1.11.1加载onnx文件会报错, onnxruntime1.14.1能正常运行
 class OWLVIT():
     def __init__(self, image_modelpath, text_modelpath, post_modelpath, box_thresh = 0.2, text_thresh = 0.25):
         self.image_model = cv2.dnn.readNet(image_modelpath)
